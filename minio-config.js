@@ -27,6 +27,7 @@ module.exports = function(RED) {
 	    this.host =   config.host;
 	    this.port =   parseInt(config.port);
         this.useSsl = config.useSsl;
+        this.region = config.region;
 
         var node = this;
 
@@ -42,7 +43,8 @@ module.exports = function(RED) {
                     port: this.port,
                     useSSL: this.useSsl,
                     accessKey: this.credentials.accessKey,
-                    secretKey: this.credentials.secretKey
+                    secretKey: this.credentials.secretKey,
+                    region: this.region
                 });
     
     
